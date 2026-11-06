@@ -1,0 +1,1714 @@
+/* ===================================================================
+   Safe Haven - A Safe Place for Your Feelings
+   Theme: Minimal / Warm / Soft (Enhanced UI/UX)
+   Palette: Cream, Off-white, Beige, Light Brown, Warm Terracotta
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  /* Surface & Section Backgrounds (Distinct alternating levels) */
+  --bg-body: #FAF7F2;
+  --bg-nav: rgba(253, 251, 248, 0.96);
+  --bg-hero: linear-gradient(180deg, #FBF8F4 0%, #F5ECE0 100%);
+  --bg-section-moods: #F6EFE6;
+  --bg-section-encouragement: #EDE3D4;
+  --bg-section-about: #FAF6F0;
+  --bg-footer: #E4D7C5;
+
+  /* Card Surfaces */
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #FDFBF8;
+  --bg-card-hover: #FFFDF9;
+
+  /* Text Colors (Warm, High Contrast, Readable) */
+  --text-main: #33281E;         /* Deep Warm Espresso */
+  --text-muted: #665A4D;        /* Medium Warm Taupe */
+  --text-light: #8F8274;        /* Soft Light Taupe */
+
+  /* Brand / Interactive Accent Colors */
+  --accent-warm: #A3663C;       /* Primary Terracotta Warmth */
+  --accent-warm-hover: #854E28; /* Darker Caramel Brown */
+  --accent-soft: #ECDDCF;       /* Soft Biscuit Tint */
+  --accent-highlight: #FAF1E8;  /* Light Warm Glow */
+  --accent-sage: #6B8F77;       /* Gentle Sage Green */
+  --accent-sage-bg: #EAF2EC;
+
+  /* Borders & Dividers (Clear & Visible) */
+  --border-subtle: #E5D7C7;
+  --border-card: #D9C8B5;
+  --border-interactive: #B8855F;
+  --border-hover: #A3663C;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 3px 10px rgba(120, 85, 55, 0.05);
+  --shadow-md: 0 8px 24px rgba(120, 85, 55, 0.09);
+  --shadow-lg: 0 16px 36px rgba(120, 85, 55, 0.13);
+  --shadow-card-hover: 0 14px 30px rgba(163, 102, 60, 0.16);
+  --shadow-btn: 0 6px 18px rgba(163, 102, 60, 0.28);
+  --shadow-btn-hover: 0 10px 24px rgba(133, 78, 40, 0.36);
+
+  /* Border Radius */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Typography */
+  --font-family: 'Prompt', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transition-normal: all 0.26s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ===================================================================
+   Base Reset & Accessibility
+   =================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* Accessible Keyboard Focus Visible */
+:focus-visible {
+  outline: 3px solid var(--accent-warm) !important;
+  outline-offset: 3px !important;
+}
+
+/* ===================================================================
+   ส่วนที่ 1: Navigation Bar (ชัดเจน สังเกตเห็นง่าย)
+   =================================================================== */
+.navbar-safehaven {
+  background: var(--bg-nav);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 2px solid var(--border-subtle);
+  transition: var(--transition-normal);
+  padding: 0.95rem 0;
+  z-index: 1030;
+}
+
+.navbar-safehaven.scrolled {
+  box-shadow: 0 4px 20px rgba(120, 85, 55, 0.08);
+  padding: 0.7rem 0;
+  background: rgba(253, 251, 248, 0.98);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text-main) !important;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-normal);
+}
+
+.brand-icon-wrapper {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-soft);
+  border: 1.5px solid var(--border-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-warm);
+  font-size: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.navbar-brand:hover .brand-icon-wrapper {
+  transform: rotate(-6deg) scale(1.06);
+  background-color: #E2CEBD;
+  border-color: var(--accent-warm);
+}
+
+.navbar-brand .brand-title {
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+}
+
+.navbar-brand .brand-tagline {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: -3px;
+}
+
+/* Nav Links with Clear Interactive Cues */
+.navbar-safehaven .nav-link {
+  color: var(--text-main) !important;
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 0.55rem 1.15rem !important;
+  margin: 0 0.15rem;
+  border-radius: var(--radius-pill);
+  transition: var(--transition-normal);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Animated Underline Indicator */
+.navbar-safehaven .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2.5px;
+  background-color: var(--accent-warm);
+  border-radius: var(--radius-pill);
+  transition: width 0.24s ease-in-out;
+}
+
+.navbar-safehaven .nav-link:hover {
+  color: var(--accent-warm-hover) !important;
+  background-color: var(--accent-highlight);
+}
+
+.navbar-safehaven .nav-link:hover::after {
+  width: calc(100% - 2rem);
+}
+
+.navbar-safehaven .nav-link.active {
+  color: var(--accent-warm-hover) !important;
+  background-color: rgba(163, 102, 60, 0.1);
+  font-weight: 600;
+}
+
+.navbar-safehaven .nav-link.active::after {
+  width: calc(100% - 2rem);
+}
+
+.navbar-toggler {
+  border: 1.5px solid var(--border-card);
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.navbar-toggler:hover {
+  background-color: var(--accent-highlight);
+  border-color: var(--accent-warm);
+}
+
+/* ===================================================================
+   ส่วนที่ 2: Hero Section (โดดเด่น สมดุล ลำดับสายตาชัดเจน)
+   =================================================================== */
+.hero-section {
+  background: var(--bg-hero);
+  position: relative;
+  padding-top: 4.8rem;
+  padding-bottom: 5.5rem;
+  border-bottom: 2px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-card);
+  padding: 0.42rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-warm);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+}
+
+.hero-pill-badge i {
+  color: var(--accent-sage);
+}
+
+.hero-title {
+  font-size: clamp(2.1rem, 4.8vw, 3.35rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  line-height: 1.32;
+}
+
+.hero-title span.highlight-text {
+  color: var(--accent-warm);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-description {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 1.4rem;
+  max-width: 580px;
+}
+
+/* Value Benefit Highlight Box in Hero */
+.hero-benefit-note {
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.25rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 580px;
+  margin-bottom: 2.2rem;
+}
+
+.hero-benefit-note i {
+  color: var(--accent-warm);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ===================================================================
+   ปุ่ม (Buttons) - เด่น ชัดเจน มีกรอบและมิติ
+   =================================================================== */
+.btn-warm-primary {
+  background-color: var(--accent-warm);
+  color: #FFFFFF !important;
+  border: 1.5px solid var(--accent-warm);
+  padding: 0.9rem 2.25rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-btn);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.btn-warm-primary:hover {
+  background-color: var(--accent-warm-hover);
+  border-color: var(--accent-warm-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-btn-hover);
+}
+
+.btn-warm-primary:active {
+  transform: translateY(-1px);
+}
+
+.btn-warm-outline {
+  background-color: #FFFFFF;
+  color: var(--text-main) !important;
+  border: 2px solid var(--border-card);
+  padding: 0.88rem 1.85rem;
+  font-weight: 600;
+  font-size: 1.02rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.btn-warm-outline:hover {
+  background-color: var(--accent-highlight);
+  border-color: var(--accent-warm);
+  color: var(--accent-warm-hover) !important;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-warm-outline:active {
+  transform: translateY(-1px);
+}
+
+/* Hero Illustration Container */
+.hero-visual-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  background: #FFFFFF;
+  border: 2px solid var(--border-card);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-visual-card svg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  display: block;
+}
+
+.floating-quote-badge {
+  position: absolute;
+  bottom: -16px;
+  left: 28px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-card);
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-main);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+  animation: gentleFloat 5s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ===================================================================
+   User Flow Roadmap (แนะแนวทางการเริ่มต้นใช้งาน 4 ขั้นตอน)
+   =================================================================== */
+.user-flow-section {
+  background-color: #FFFFFF;
+  border-bottom: 2px solid var(--border-subtle);
+  padding: 2.2rem 0;
+}
+
+.flow-steps-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.flow-step-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: var(--bg-body);
+  border: 1.5px solid var(--border-card);
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-main);
+  transition: var(--transition-normal);
+}
+
+.flow-step-item .step-badge {
+  width: 24px;
+  height: 24px;
+  background-color: var(--accent-soft);
+  color: var(--accent-warm);
+  font-weight: 700;
+  font-size: 0.82rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-step-item.active {
+  background-color: var(--accent-highlight);
+  border-color: var(--accent-warm);
+  color: var(--accent-warm-hover);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.flow-step-item.active .step-badge {
+  background-color: var(--accent-warm);
+  color: #FFFFFF;
+}
+
+.flow-step-arrow {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* ===================================================================
+   Section Header Styling (มาตรฐานทุกส่วน)
+   =================================================================== */
+.section-badge {
+  display: inline-block;
+  background-color: var(--accent-soft);
+  color: var(--accent-warm-hover);
+  border: 1px solid var(--border-card);
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 0.35rem 1.15rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.section-title {
+  font-size: clamp(1.85rem, 3.3vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color: var(--text-main);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.8;
+}
+
+/* ===================================================================
+   ส่วนที่ 3: Mood Introduction Section (การ์ดชัดเจน รู้ทันทีว่ากดได้)
+   =================================================================== */
+.mood-section {
+  padding: 5.5rem 0;
+  background-color: var(--bg-section-moods);
+  border-bottom: 2px solid var(--border-subtle);
+  position: relative;
+}
+
+/* The Clickable Mood Card */
+.mood-card {
+  background-color: #FFFFFF;
+  border: 2px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 2.1rem 1.6rem 1.6rem 1.6rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Top Accent Stripe on Hover */
+.mood-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: transparent;
+  transition: var(--transition-normal);
+}
+
+/* Clear Visual State on Hover */
+.mood-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-warm);
+  box-shadow: var(--shadow-card-hover);
+  background-color: var(--bg-card-hover);
+}
+
+.mood-card:hover::before {
+  background-color: var(--accent-warm);
+}
+
+/* Active State (Selected Card) */
+.mood-card.active {
+  border-color: var(--accent-warm-hover);
+  box-shadow: 0 12px 28px rgba(163, 102, 60, 0.22);
+  background-color: #FFFDF9;
+}
+
+.mood-card.active::before {
+  background-color: var(--accent-warm-hover);
+}
+
+/* Icon Box inside Mood Card */
+.mood-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: var(--transition-normal);
+}
+
+.mood-card:hover .mood-icon-box {
+  transform: scale(1.08);
+}
+
+/* Tinted Icon Boxes */
+.mood-icon-exhausted {
+  background-color: #F8EFE6;
+  color: #A3663C;
+}
+.mood-icon-sad {
+  background-color: #E8F0F5;
+  color: #557F99;
+}
+.mood-icon-stressed {
+  background-color: #FAEEE8;
+  color: #B8674F;
+}
+.mood-icon-lonely {
+  background-color: #F3ECF6;
+  color: #846D95;
+}
+.mood-icon-confused {
+  background-color: #FAF5E6;
+  color: #AB8E33;
+}
+.mood-icon-demotivated {
+  background-color: #EBF2EC;
+  color: #5E8863;
+}
+
+.mood-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.22rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-body);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  width: fit-content;
+  margin-bottom: 0.85rem;
+}
+
+.mood-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+  color: var(--text-main);
+}
+
+.mood-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.4rem;
+  flex-grow: 1;
+}
+
+/* Explicit Clickable Cue (Mini Button inside Card) */
+.mood-action-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-body);
+  border: 1.5px solid var(--border-subtle);
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--accent-warm);
+  margin-top: auto;
+  transition: var(--transition-normal);
+}
+
+.mood-card:hover .mood-action-pill {
+  background-color: var(--accent-warm);
+  border-color: var(--accent-warm);
+  color: #FFFFFF;
+}
+
+.mood-card.active .mood-action-pill {
+  background-color: var(--accent-warm-hover);
+  border-color: var(--accent-warm-hover);
+  color: #FFFFFF;
+}
+
+.mood-action-pill i {
+  transition: transform 0.2s ease;
+}
+
+.mood-card:hover .mood-action-pill i {
+  transform: translateX(4px);
+}
+
+/* Mood Response Interactive Container */
+.mood-response-container {
+  display: none;
+  background-color: #FFFFFF;
+  border: 2px solid var(--accent-warm);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.25rem;
+  margin-top: 2.75rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  animation: fadeInDown 0.35s ease-in-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mood-response-container.show {
+  display: block;
+}
+
+.mood-response-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--bg-body);
+  border: 1px solid var(--border-card);
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.mood-response-close:hover {
+  background-color: var(--accent-soft);
+  color: var(--text-main);
+  border-color: var(--accent-warm);
+}
+
+/* ===================================================================
+   ส่วนที่ 4: Encouragement Section (การ์ดข้อความอ่าน ไม่ใช่ปุ่มกด)
+   =================================================================== */
+.encouragement-section {
+  padding: 5.5rem 0;
+  background-color: var(--bg-section-encouragement);
+  border-bottom: 2px solid var(--border-subtle);
+  position: relative;
+}
+
+/* Passive Reading Card (No button-like hover elevation) */
+.encouragement-card {
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  cursor: default; /* Clear that this is reading content, not a clickable button */
+}
+
+.quote-mark {
+  font-size: 2.4rem;
+  color: var(--accent-warm);
+  opacity: 0.5;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.encouragement-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.encouragement-subtext {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.encouragement-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-warm);
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ===================================================================
+   ส่วนเพิ่มเติม: About Section (เกี่ยวกับเรา)
+   =================================================================== */
+.about-section {
+  padding: 5.5rem 0;
+  background-color: var(--bg-section-about);
+  border-bottom: 2px solid var(--border-subtle);
+}
+
+.about-box {
+  background-color: #FFFFFF;
+  border: 2px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 3.25rem 2.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.value-pill-card {
+  background-color: var(--bg-body);
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  height: 100%;
+  cursor: default;
+}
+
+.value-icon {
+  font-size: 2rem;
+  color: var(--accent-warm);
+  margin-bottom: 0.75rem;
+}
+
+.value-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.value-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* ===================================================================
+   ส่วนที่ 5: Footer
+   =================================================================== */
+.footer-safehaven {
+  background-color: var(--bg-footer);
+  padding: 4.8rem 0 2rem 0;
+  color: var(--text-muted);
+}
+
+.footer-brand-title {
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.footer-heading {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--text-main);
+  font-size: 0.96rem;
+  font-weight: 500;
+  transition: var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.footer-links a:hover {
+  color: var(--accent-warm-hover);
+  background-color: rgba(255, 255, 255, 0.55);
+  transform: translateX(4px);
+}
+
+/* Hotline & Support Card */
+.footer-support-box {
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.6rem;
+  font-size: 0.92rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.footer-support-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-support-title i {
+  color: var(--accent-warm);
+}
+
+.footer-support-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--accent-warm);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-highlight);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 0.35rem;
+  transition: var(--transition-normal);
+}
+
+.footer-support-phone:hover {
+  color: #FFFFFF;
+  background-color: var(--accent-warm);
+  border-color: var(--accent-warm);
+}
+
+/* Closing Note Banner */
+.footer-closing-banner {
+  background-color: #FFFFFF;
+  border: 2px solid var(--border-card);
+  border-radius: var(--radius-pill);
+  padding: 1.15rem 2.25rem;
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.footer-closing-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0;
+}
+
+.footer-bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-card);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--accent-warm);
+  color: #FFFFFF;
+  border-radius: var(--radius-pill);
+  border: 2px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: var(--shadow-btn);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-normal);
+  z-index: 1000;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--accent-warm-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-btn-hover);
+  color: #FFFFFF;
+}
+
+/* ===================================================================
+   Responsive Adjustments
+   =================================================================== */
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 3.8rem;
+    padding-bottom: 3.8rem;
+    text-align: center;
+  }
+
+  .hero-description,
+  .hero-benefit-note {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .floating-quote-badge {
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    bottom: -18px;
+    animation: none;
+  }
+
+  .navbar-collapse {
+    background-color: #FFFFFF;
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-top: 0.85rem;
+    box-shadow: var(--shadow-md);
+    border: 1.5px solid var(--border-card);
+  }
+
+  .navbar-safehaven .nav-link {
+    padding: 0.65rem 1rem !important;
+  }
+
+  .navbar-safehaven .nav-link::after {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding-top: 2.8rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .flow-step-arrow {
+    display: none;
+  }
+
+  .mood-section,
+  .encouragement-section,
+  .about-section {
+    padding: 3.8rem 0;
+  }
+
+  .about-box {
+    padding: 2rem 1.25rem;
+  }
+
+  .footer-closing-banner {
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* ===================================================================
+   Prompt 02: Branching Questionnaire System (ระบบคำถามสำรวจความรู้สึก)
+   =================================================================== */
+.survey-section {
+  padding: 5.5rem 0;
+  background-color: #F8F3EB;
+  border-bottom: 2px solid var(--border-subtle);
+  position: relative;
+}
+
+/* Category Selection Cards */
+.survey-category-card {
+  background-color: #FFFFFF;
+  border: 2px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.85rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.survey-category-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-warm);
+  box-shadow: var(--shadow-card-hover);
+  background-color: var(--bg-card-hover);
+}
+
+.cat-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.65rem;
+  margin-bottom: 1.25rem;
+  transition: var(--transition-normal);
+}
+
+.survey-category-card:hover .cat-icon-box {
+  transform: scale(1.08);
+}
+
+.cat-icon-academics { background-color: #F8EFE6; color: #A3663C; }
+.cat-icon-love { background-color: #FDEEEE; color: #C46767; }
+.cat-icon-family { background-color: #EEF4F0; color: #5B8A68; }
+.cat-icon-personal { background-color: #F4EEF7; color: #876296; }
+.cat-icon-future { background-color: #FAF4E6; color: #B08D33; }
+
+.cat-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.cat-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.cat-action-cue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-body);
+  border: 1.5px solid var(--border-subtle);
+  padding: 0.5rem 0.95rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-warm);
+  margin-top: auto;
+  transition: var(--transition-normal);
+}
+
+.survey-category-card:hover .cat-action-cue {
+  background-color: var(--accent-warm);
+  border-color: var(--accent-warm);
+  color: #FFFFFF;
+}
+
+/* Survey Main Container Box */
+.survey-main-box {
+  background-color: #FFFFFF;
+  border: 2px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-md);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Progress Bar */
+.survey-progress-wrap {
+  background-color: #EFE6D8;
+  height: 9px;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+}
+
+.survey-progress-bar {
+  background-color: var(--accent-warm);
+  height: 100%;
+  width: 20%;
+  border-radius: var(--radius-pill);
+  transition: width 0.35s ease;
+}
+
+/* Question Header */
+.survey-question-header {
+  margin-bottom: 2rem;
+}
+
+.survey-step-badge {
+  display: inline-block;
+  background-color: var(--accent-highlight);
+  color: var(--accent-warm-hover);
+  border: 1px solid var(--border-interactive);
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Quick Category Switch / Reset Link */
+.survey-reset-link {
+  background: transparent;
+  border: 1px solid var(--border-card);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  line-height: 1.4;
+}
+
+.survey-reset-link:hover {
+  background-color: var(--accent-highlight);
+  border-color: var(--accent-warm);
+  color: var(--accent-warm-hover);
+  transform: translateY(-1px);
+}
+
+/* Conversational Chat Flow */
+.survey-chat-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Bot Message Bubble (Question & Response) */
+.chat-message-bot {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.bot-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-warm), var(--accent-warm-hover));
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(163, 102, 60, 0.22);
+}
+
+.bot-avatar.mini {
+  width: 32px;
+  height: 32px;
+  font-size: 0.9rem;
+  box-shadow: none;
+}
+
+.bot-avatar.response-avatar {
+  background: linear-gradient(135deg, #854E28, #A3663C);
+}
+
+.bot-bubble {
+  background-color: #FAF6F0;
+  border: 1.5px solid var(--border-card);
+  border-radius: 4px var(--radius-md) var(--radius-md) var(--radius-md);
+  padding: 1.35rem 1.6rem;
+  box-shadow: var(--shadow-sm);
+  flex-grow: 1;
+  position: relative;
+}
+
+.bot-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.55rem;
+}
+
+.bot-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-warm-hover);
+}
+
+.bot-role-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background-color: #FFFFFF;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 0.15rem 0.6rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.bot-role-tag.warm {
+  background-color: var(--accent-highlight);
+  color: var(--accent-warm-hover);
+  border-color: var(--border-interactive);
+}
+
+.survey-q-title {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.survey-q-hint {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+/* Options Helper Label */
+.options-helper-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Option Cards (Interactive Radio Cards) */
+.survey-options-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.survey-option-card {
+  background-color: #FFFFFF;
+  border: 2px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  user-select: none;
+}
+
+.survey-option-card:hover {
+  border-color: var(--border-interactive);
+  background-color: #FFFDF9;
+  transform: translateX(4px);
+}
+
+.survey-option-card.selected {
+  border-color: var(--accent-warm);
+  background-color: var(--accent-highlight);
+  box-shadow: 0 4px 14px rgba(163, 102, 60, 0.14);
+}
+
+.survey-option-card.dimmed {
+  opacity: 0.55;
+  border-color: var(--border-subtle);
+}
+
+.survey-option-card.dimmed:hover {
+  opacity: 0.9;
+  transform: translateX(2px);
+}
+
+.survey-option-card .option-indicator {
+  font-size: 1.35rem;
+  color: var(--border-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.survey-option-card.selected .option-indicator {
+  color: var(--accent-warm);
+}
+
+.survey-option-card .option-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.survey-option-card.selected .option-text {
+  font-weight: 600;
+  color: var(--accent-warm-hover);
+}
+
+/* Typing Indicator */
+.survey-typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.35rem 0;
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.typing-bubble {
+  background-color: #FAF5EE;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.typing-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.typing-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.typing-dots span {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-warm);
+  border-radius: 50%;
+  animation: typingBounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+.typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+.typing-dots span:nth-child(3) { animation-delay: 0s; }
+
+@keyframes typingBounce {
+  0%, 80%, 100% { transform: scale(0.4); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* Conversational Response Section */
+.survey-response-section {
+  animation: fadeInUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.response-bubble-msg .bot-bubble {
+  background-color: #FFFDF9;
+  border: 2px solid var(--border-interactive);
+  border-left: 5px solid var(--accent-warm);
+  border-radius: 4px var(--radius-md) var(--radius-md) var(--radius-md);
+  padding: 1.45rem 1.7rem;
+  box-shadow: 0 6px 20px rgba(163, 102, 60, 0.08);
+}
+
+.response-body-text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.response-read-cue {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Pulse animation on Continue button when ready */
+.btn-warm-primary.btn-pulse {
+  animation: buttonPulse 2.2s infinite ease-in-out;
+}
+
+@keyframes buttonPulse {
+  0% { box-shadow: 0 4px 14px rgba(163, 102, 60, 0.28); }
+  50% { box-shadow: 0 6px 22px rgba(163, 102, 60, 0.52); transform: translateY(-2px); }
+  100% { box-shadow: 0 4px 14px rgba(163, 102, 60, 0.28); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Footer Navigation Buttons inside Survey */
+.survey-nav-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1.5px solid var(--border-subtle);
+}
+
+/* ===================================================================
+   Summary Screen Styles (หน้าสรุปผลสะท้อนใจ)
+   =================================================================== */
+.summary-welcome-card {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.summary-icon-badge {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background-color: var(--accent-highlight);
+  border: 2px solid var(--accent-warm);
+  color: var(--accent-warm);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+}
+
+.summary-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.summary-lead {
+  font-size: 1.02rem;
+  color: var(--text-muted);
+}
+
+/* Answers Review Section */
+.summary-answers-wrapper {
+  background-color: var(--bg-body);
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.summary-answer-item {
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed var(--border-card);
+}
+
+.summary-answer-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ans-q-num {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-warm);
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.ans-q-title {
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.ans-q-choice {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Reflection Box */
+.summary-reflection-box {
+  background-color: #FAF5EE;
+  border-left: 4.5px solid var(--accent-warm);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.summary-reflection-box h5 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--accent-warm-hover);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.summary-reflection-box p {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--text-main);
+  margin-bottom: 0;
+}
+
+/* Encouragement Warm Box */
+.summary-encouragement-box {
+  background-color: #FFFDF9;
+  border: 2px solid var(--border-interactive);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 2rem;
+  margin-bottom: 2.2rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.summary-encouragement-box .quote-icon {
+  font-size: 2rem;
+  color: var(--accent-warm);
+  opacity: 0.4;
+  line-height: 1;
+  margin-bottom: 0.65rem;
+}
+
+.summary-encouragement-box p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-main);
+  margin-bottom: 0;
+}
+
+/* Self-care Tips */
+.survey-tip-card {
+  background-color: var(--bg-body);
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 1.35rem;
+  height: 100%;
+}
+
+.survey-tip-card .tip-icon {
+  font-size: 1.6rem;
+  color: var(--accent-warm);
+  margin-bottom: 0.5rem;
+}
+
+.survey-tip-card .tip-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.survey-tip-card .tip-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .survey-main-box {
+    padding: 1.8rem 1.25rem;
+  }
+  
+  .survey-nav-footer {
+    flex-direction: column-reverse;
+    gap: 0.85rem;
+  }
+  
+  .survey-nav-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .chat-message-bot {
+    gap: 0.7rem;
+  }
+
+  .bot-avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 1.15rem;
+  }
+
+  .bot-bubble {
+    padding: 1.1rem 1.15rem;
+  }
+
+  .response-body-text {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .survey-option-card {
+    padding: 0.95rem 1.1rem;
+    gap: 0.85rem;
+  }
+
+  .survey-option-card .option-text {
+    font-size: 0.96rem;
+  }
+}

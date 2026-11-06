@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Safe Haven - พื้นที่ปลอดภัยสำหรับทุกความรู้สึก ไม่ว่าคุณจะเผชิญกับเรื่องใด ที่นี่พร้อมเป็นพื้นที่ให้คุณได้พักและรับกำลังใจ">
+  <title>Safe Haven — A Safe Place for Your Feelings</title>
+
+  <!-- Google Fonts: Prompt & Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" onerror="this.onerror=null;this.href='style.css';">
+</head>
+<body>
+
+  <!-- ===================================================================
+       ส่วนที่ 1: Navigation Bar
+       =================================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-safehaven sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        <div class="brand-icon-wrapper">
+          <i class="bi bi-heart-pulse-fill"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Safe Haven</span>
+          <span class="brand-tagline">พื้นที่ปลอดภัยสำหรับทุกความรู้สึก</span>
+        </div>
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+
+      <!-- Nav Links with Clear Interactive Underline / Hover -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item">
+            <a class="nav-link active" href="#hero">
+              <i class="bi bi-house-door me-1 d-lg-none"></i>หน้าแรก
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#survey">
+              <i class="bi bi-clipboard2-heart me-1 d-lg-none"></i>สำรวจความรู้สึก
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#encouragement">
+              <i class="bi bi-chat-heart me-1 d-lg-none"></i>ข้อความให้กำลังใจ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              <i class="bi bi-info-circle me-1 d-lg-none"></i>เกี่ยวกับเรา
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===================================================================
+         ส่วนที่ 2: Hero Section (หัวข้อเด่น สมดุล ปุ่มชัดเจน)
+         =================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Text Content -->
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="hero-pill-badge">
+              <i class="bi bi-flower2"></i>
+              <span>🌿 ยินดีต้อนรับสู่พื้นที่พักใจออนไลน์</span>
+            </div>
+
+            <h1 class="hero-title">
+              ไม่จำเป็นต้องเข้มแข็ง<br class="d-none d-sm-inline">
+              <span class="highlight-text">ตลอดเวลาก็ได้นะ</span>
+            </h1>
+
+            <p class="hero-description">
+              หากวันนี้มีเรื่องที่ทำให้เหนื่อยใจ ไม่ว่าจะเรื่องการเรียน ความรัก ครอบครัว เพื่อน หรือความรู้สึกภายใน ที่นี่พร้อมเป็นพื้นที่เล็ก ๆ ให้คุณได้พัก ทบทวนความรู้สึก และค่อย ๆ ก้าวผ่านเรื่องราวเหล่านั้นไป
+            </p>
+
+            <!-- Value / Benefit Description Box -->
+            <div class="hero-benefit-note">
+              <i class="bi bi-shield-check"></i>
+              <span>พื้นที่ไร้การตัดสิน ไม่มีการเก็บข้อมูลส่วนตัว 100% ปลอดภัยและเป็นมิตรต่อหัวใจของคุณ</span>
+            </div>
+
+            <!-- Clear Dominant Buttons -->
+            <div class="d-flex flex-wrap gap-3 hero-buttons">
+              <a href="#survey" class="btn btn-warm-primary">
+                <i class="bi bi-arrow-down-circle-fill"></i>
+                <span>เริ่มต้นสำรวจความรู้สึก</span>
+              </a>
+              <a href="#about" class="btn btn-warm-outline">
+                <i class="bi bi-info-circle"></i>
+                <span>ทำความรู้จัก Safe Haven</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Peaceful Illustration -->
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="hero-visual-card">
+              <!-- Custom Peaceful SVG Illustration -->
+              <svg viewBox="0 0 600 480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ภาพประกอบพื้นที่อบอุ่นและปลอดภัย">
+                <defs>
+                  <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#F2E6D8" />
+                    <stop offset="100%" stop-color="#FCF9F5" />
+                  </linearGradient>
+                  <linearGradient id="warmGlow" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#FFEED9" stop-opacity="0.8" />
+                    <stop offset="100%" stop-color="#FAF7F2" stop-opacity="0.1" />
+                  </linearGradient>
+                  <linearGradient id="chairGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#C59779" />
+                    <stop offset="100%" stop-color="#AF7E60" />
+                  </linearGradient>
+                </defs>
+
+                <!-- Room / Frame Background -->
+                <rect width="600" height="480" rx="20" fill="url(#skyGrad)" />
+
+                <!-- Gentle Sunlight / Window Circle -->
+                <circle cx="430" cy="180" r="140" fill="url(#warmGlow)" />
+                <circle cx="430" cy="180" r="95" fill="#FFFBF5" fill-opacity="0.75" />
+
+                <!-- Window Arc Frame -->
+                <path d="M350 240 C350 145 510 145 510 240 L510 270 L350 270 Z" fill="#EFE5D9" />
+                <path d="M360 235 C360 155 500 155 500 235 L500 265 L360 265 Z" fill="#FDFBF9" />
+                <line x1="430" y1="160" x2="430" y2="265" stroke="#E3D5C5" stroke-width="3" />
+                <line x1="360" y1="220" x2="500" y2="220" stroke="#E3D5C5" stroke-width="3" />
+
+                <!-- Warm Floor Ground -->
+                <path d="M0 380 Q300 370 600 380 L600 480 L0 480 Z" fill="#EFE8DE" />
+                <ellipse cx="300" cy="420" rx="260" ry="24" fill="#E6DDCF" fill-opacity="0.6" />
+
+                <!-- Cozy Rug -->
+                <ellipse cx="280" cy="425" rx="190" ry="28" fill="#FBF6EE" stroke="#E5DACD" stroke-width="2" stroke-dasharray="4 4" />
+
+                <!-- Floor Lamp -->
+                <path d="M480 395 L500 425 L460 425 Z" fill="#998372" />
+                <line x1="480" y1="210" x2="480" y2="400" stroke="#B09A87" stroke-width="4" stroke-linecap="round" />
+                <!-- Lamp Shade -->
+                <path d="M450 215 L510 215 L495 160 L465 160 Z" fill="#F7EFE4" stroke="#DCCBBA" stroke-width="2" />
+                <!-- Warm Glow from Lamp -->
+                <polygon points="450,215 510,215 560,370 400,370" fill="#FFF6E5" fill-opacity="0.35" />
+
+                <!-- Cozy Armchair -->
+                <ellipse cx="230" cy="420" rx="90" ry="18" fill="#D7CABE" fill-opacity="0.6" />
+                <line x1="170" y1="380" x2="160" y2="420" stroke="#795F4D" stroke-width="6" stroke-linecap="round" />
+                <line x1="290" y1="380" x2="300" y2="420" stroke="#795F4D" stroke-width="6" stroke-linecap="round" />
+                <line x1="195" y1="380" x2="190" y2="415" stroke="#685040" stroke-width="5" stroke-linecap="round" />
+                <line x1="265" y1="380" x2="270" y2="415" stroke="#685040" stroke-width="5" stroke-linecap="round" />
+
+                <rect x="160" y="220" width="140" height="150" rx="40" fill="url(#chairGrad)" />
+                <rect x="175" y="240" width="110" height="110" rx="25" fill="#BA896B" />
+                <rect x="145" y="335" width="170" height="45" rx="22" fill="#D8AB8D" stroke="#B88667" stroke-width="1.5" />
+                <rect x="135" y="295" width="30" height="70" rx="15" fill="#B38164" />
+                <rect x="295" y="295" width="30" height="70" rx="15" fill="#B38164" />
+
+                <rect x="220" y="290" width="60" height="55" rx="16" fill="#FAF5ED" stroke="#E2D4C3" stroke-width="2" transform="rotate(-12 250 317)" />
+                <circle cx="248" cy="315" r="4" fill="#C59779" />
+
+                <path d="M148 340 C148 375 160 395 180 395 C195 395 190 355 210 355" fill="none" stroke="#E7D8C7" stroke-width="14" stroke-linecap="round" />
+
+                <!-- Side Table with Warm Drink -->
+                <ellipse cx="365" cy="415" rx="45" ry="10" fill="#D7CABE" fill-opacity="0.6" />
+                <line x1="365" y1="350" x2="335" y2="415" stroke="#876C59" stroke-width="4" stroke-linecap="round" />
+                <line x1="365" y1="350" x2="395" y2="415" stroke="#876C59" stroke-width="4" stroke-linecap="round" />
+                <line x1="365" y1="350" x2="365" y2="418" stroke="#755B49" stroke-width="4" stroke-linecap="round" />
+                <ellipse cx="365" cy="350" rx="45" ry="12" fill="#C2A48D" stroke="#A88B74" stroke-width="2" />
+
+                <!-- Teacup / Coffee Mug -->
+                <rect x="355" y="326" width="22" height="20" rx="4" fill="#FAF7F2" stroke="#D1C3B2" stroke-width="1.5" />
+                <path d="M377 330 C383 330 383 342 377 342" stroke="#D1C3B2" stroke-width="2" fill="none" />
+                <path d="M362 320 Q366 312 361 304" stroke="#B09A87" stroke-width="1.5" stroke-linecap="round" fill="none" stroke-opacity="0.75" />
+                <path d="M369 318 Q373 310 368 300" stroke="#B09A87" stroke-width="1.5" stroke-linecap="round" fill="none" stroke-opacity="0.75" />
+
+                <!-- House Plant in Pot -->
+                <path d="M90 395 L115 395 L110 435 L95 435 Z" fill="#BA795A" />
+                <ellipse cx="102.5" cy="395" rx="14" ry="4" fill="#8E583D" />
+                <path d="M102 395 Q100 340 70 325 Q95 345 102 395 Z" fill="#75967E" />
+                <path d="M102 395 Q115 320 135 310 Q120 345 102 395 Z" fill="#88A891" />
+                <path d="M102 395 Q75 350 55 355 Q80 370 102 395 Z" fill="#688770" />
+                <path d="M102 395 Q135 355 150 365 Q125 375 102 395 Z" fill="#75967E" />
+
+                <!-- Hanging Plant at Top Corner -->
+                <line x1="80" y1="0" x2="80" y2="100" stroke="#B09A87" stroke-width="1.5" />
+                <path d="M68 100 L92 100 L88 120 L72 120 Z" fill="#C98F72" />
+                <path d="M72 115 Q60 150 50 170" stroke="#75967E" stroke-width="3" stroke-linecap="round" fill="none" />
+                <path d="M80 115 Q80 160 85 185" stroke="#88A891" stroke-width="3" stroke-linecap="round" fill="none" />
+                <path d="M88 115 Q100 145 110 165" stroke="#688770" stroke-width="3" stroke-linecap="round" fill="none" />
+
+                <!-- Floating Peaceful Sparkles / Stars -->
+                <circle cx="210" cy="150" r="3" fill="#E3B38B" />
+                <circle cx="340" cy="110" r="2.5" fill="#E3B38B" />
+                <circle cx="490" cy="100" r="3.5" fill="#E3B38B" />
+                <path d="M270 110 L273 118 L281 121 L273 124 L270 132 L267 124 L259 121 L267 118 Z" fill="#E2BD9A" fill-opacity="0.8" />
+              </svg>
+
+              <!-- Floating badge under hero image -->
+              <div class="floating-quote-badge">
+                <i class="bi bi-shield-heart text-danger"></i>
+                <span>ที่นี่ไม่มีใครตัดสินคุณนะ 🌿</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         User Flow Roadmap: 4 ขั้นตอนเริ่มต้นใช้งาน Safe Haven
+         =================================================================== -->
+    <div class="user-flow-section">
+      <div class="container text-center">
+        <p class="small text-muted mb-2 fw-semibold">
+          <i class="bi bi-compass me-1"></i> ขั้นตอนการใช้งานพื้นที่พักใจ:
+        </p>
+        <div class="flow-steps-wrapper">
+          <a href="#about" class="flow-step-item text-decoration-none">
+            <span class="step-badge">1</span>
+            <span>ทำความรู้จัก Safe Haven</span>
+          </a>
+          <i class="bi bi-chevron-right flow-step-arrow"></i>
+          <a href="#survey" class="flow-step-item text-decoration-none">
+            <span class="step-badge">2</span>
+            <span>เลือกหมวดปัญหา</span>
+          </a>
+          <i class="bi bi-chevron-right flow-step-arrow"></i>
+          <a href="#survey" class="flow-step-item active text-decoration-none">
+            <span class="step-badge">3</span>
+            <span>ตอบคำถามสำรวจใจ</span>
+          </a>
+          <i class="bi bi-chevron-right flow-step-arrow"></i>
+          <a href="#encouragement" class="flow-step-item text-decoration-none">
+            <span class="step-badge">4</span>
+            <span>อ่านข้อความให้กำลังใจ</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         Prompt 02: ระบบคำถามสำรวจความรู้สึก (Branching Questionnaire)
+         =================================================================== -->
+    <section class="survey-section" id="survey">
+      <div class="container">
+        
+        <!-- View 1: เลือกหมวดปัญหา (Category Selection) -->
+        <div id="surveyCategoryView">
+          <div class="text-center mb-5">
+            <span class="section-badge">ก้าวที่ 2 & 3: สำรวจใจตัวเอง</span>
+            <h2 class="section-title">พื้นที่สำรวจความรู้สึก</h2>
+            <p class="section-subtitle">
+              เริ่มต้นด้วยการเลือกเรื่องที่คุณรู้สึกกังวลหรือเหนื่อยใจในตอนนี้ เราจะค่อย ๆ ถามคำถามเพื่อช่วยคุณทบทวนใจทีละข้อ โดยไม่มีการตัดสินใด ๆ
+            </p>
+          </div>
+
+          <!-- 5 หมวดปัญหา -->
+          <div class="row g-4 justify-content-center">
+            <!-- หมวด 1: การเรียน -->
+            <div class="col-md-6 col-lg-4">
+              <div class="survey-category-card" data-category="academics" tabindex="0" role="button" aria-label="เลือกหมวดการเรียน">
+                <div class="cat-icon-box cat-icon-academics">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+                <h3 class="cat-title">การเรียน</h3>
+                <p class="cat-desc">
+                  ความกดดันเรื่องเกรด การบ้าน การสอบ หรือความรู้สึกหมดไฟในการอ่านหนังสือ
+                </p>
+                <div class="cat-action-cue">
+                  <span>เลือกเรื่องนี้เพื่อเริ่มสำรวจ</span>
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- หมวด 2: ความรัก -->
+            <div class="col-md-6 col-lg-4">
+              <div class="survey-category-card" data-category="love" tabindex="0" role="button" aria-label="เลือกหมวดความรัก">
+                <div class="cat-icon-box cat-icon-love">
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h3 class="cat-title">ความรัก</h3>
+                <p class="cat-desc">
+                  ความสัมพันธ์ที่ไม่ชัดเจน การอกหัก ผิดหวัง หรือความไม่เข้าใจกันในความรัก
+                </p>
+                <div class="cat-action-cue">
+                  <span>เลือกเรื่องนี้เพื่อเริ่มสำรวจ</span>
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- หมวด 3: ครอบครัวและเพื่อน -->
+            <div class="col-md-6 col-lg-4">
+              <div class="survey-category-card" data-category="family_friends" tabindex="0" role="button" aria-label="เลือกหมวดครอบครัวและเพื่อน">
+                <div class="cat-icon-box cat-icon-family">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h3 class="cat-title">ครอบครัวและเพื่อน</h3>
+                <p class="cat-desc">
+                  ความขัดแย้ง ความคาดหวัง หรือความเหินห่างกับคนใกล้ชิดในชีวิตประจำวัน
+                </p>
+                <div class="cat-action-cue">
+                  <span>เลือกเรื่องนี้เพื่อเริ่มสำรวจ</span>
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- หมวด 4: ความรู้สึกส่วนตัว -->
+            <div class="col-md-6 col-lg-4">
+              <div class="survey-category-card" data-category="personal" tabindex="0" role="button" aria-label="เลือกหมวดความรู้สึกส่วนตัว">
+                <div class="cat-icon-box cat-icon-personal">
+                  <i class="bi bi-person-heart"></i>
+                </div>
+                <h3 class="cat-title">ความรู้สึกส่วนตัว</h3>
+                <p class="cat-desc">
+                  การเปรียบเทียบตัวเองกับคนอื่น ความไม่มั่นใจ วิตกกังวล หรือความเหงาภายใน
+                </p>
+                <div class="cat-action-cue">
+                  <span>เลือกเรื่องนี้เพื่อเริ่มสำรวจ</span>
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- หมวด 5: ชีวิตและอนาคต -->
+            <div class="col-md-6 col-lg-4">
+              <div class="survey-category-card" data-category="future" tabindex="0" role="button" aria-label="เลือกหมวดชีวิตและอนาคต">
+                <div class="cat-icon-box cat-icon-future">
+                  <i class="bi bi-compass"></i>
+                </div>
+                <h3 class="cat-title">ชีวิตและอนาคต</h3>
+                <p class="cat-desc">
+                  ความกังวลกับเส้นทางข้างหน้า ความสับสน หรือยังไม่รู้ว่าตัวเองจะก้าวไปทางไหน
+                </p>
+                <div class="cat-action-cue">
+                  <span>เลือกเรื่องนี้เพื่อเริ่มสำรวจ</span>
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ทางเลือกเริ่มต้นการสนทนาโดยตรง -->
+          <div class="text-center mt-4 pt-2">
+            <button type="button" id="startSurveyDirectBtn" class="btn btn-warm-outline">
+              <i class="bi bi-chat-heart me-2"></i>เริ่มต้นการสนทนาตั้งแต่คำถามแรก
+            </button>
+          </div>
+        </div>
+
+        <!-- View 2: หน้าคำถามและการสนทนาทีละข้อ (Conversational Questionnaire View) -->
+        <div id="surveyQuestionView" style="display: none;">
+          <div class="survey-main-box">
+            <!-- Progress Bar, Category Badge & Counter -->
+            <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <span id="surveyCategoryBadge" class="survey-step-badge mb-0">
+                  <i class="bi bi-chat-dots me-1"></i>หมวด: การเรียน
+                </span>
+                <button type="button" id="surveyQuickRestartBtn" class="survey-reset-link" title="เปลี่ยนหมวดปัญหา">
+                  <i class="bi bi-arrow-repeat"></i> เปลี่ยนหมวด
+                </button>
+              </div>
+              <span id="surveyCounterText" class="small fw-semibold text-muted">
+                คำถามที่ 1 จาก 5
+              </span>
+            </div>
+            <div class="survey-progress-wrap mb-4">
+              <div id="surveyProgressBar" class="survey-progress-bar" style="width: 20%;" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <!-- Chat Flow Container -->
+            <div class="survey-chat-flow">
+              <!-- Bot Question Message Bubble -->
+              <div class="chat-message-bot">
+                <div class="bot-avatar">
+                  <i class="bi bi-heart-pulse-fill"></i>
+                </div>
+                <div class="bot-bubble">
+                  <div class="bot-header">
+                    <span class="bot-name">Safe Haven</span>
+                    <span class="bot-role-tag"><i class="bi bi-shield-check me-1"></i>พื้นที่รับฟัง</span>
+                  </div>
+                  <h3 id="surveyQuestionTitle" class="survey-q-title mb-1">
+                    ช่วงนี้อะไรทำให้คุณเหนื่อยใจมากที่สุด?
+                  </h3>
+                  <p id="surveyQuestionHint" class="survey-q-hint mb-0">
+                    เลือกคำตอบที่สะท้อนความรู้สึกของคุณในตอนนี้มากที่สุด
+                  </p>
+                </div>
+              </div>
+
+              <!-- Options Selection Stack -->
+              <div class="survey-options-wrapper mt-3 mb-3" id="surveyOptionsWrapper">
+                <div class="options-helper-label text-muted small mb-2">
+                  <i class="bi bi-hand-index-thumb me-1"></i>แตะเลือกคำตอบที่คุณรู้สึกตรงใจ:
+                </div>
+                <div id="surveyOptionsContainer" class="survey-options-stack" role="radiogroup">
+                  <!-- Injected dynamically by JS -->
+                </div>
+              </div>
+
+              <!-- Safe Haven Typing Indicator (Shown briefly when user selects an option) -->
+              <div id="surveyTypingIndicator" class="survey-typing-indicator" style="display: none;">
+                <div class="bot-avatar mini">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+                <div class="typing-bubble">
+                  <span class="typing-text">Safe Haven กำลังรับฟังและเรียบเรียงความรู้สึก...</span>
+                  <span class="typing-dots">
+                    <span></span><span></span><span></span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Safe Haven Conversational Response (Revealed after user selects an answer) -->
+              <div id="surveyResponseSection" class="survey-response-section" style="display: none;">
+                <div class="chat-message-bot response-bubble-msg">
+                  <div class="bot-avatar response-avatar">
+                    <i class="bi bi-chat-heart-fill"></i>
+                  </div>
+                  <div class="bot-bubble response-bubble">
+                    <div class="bot-header">
+                      <span class="bot-name">Safe Haven ตอบกลับ</span>
+                      <span class="bot-role-tag warm"><i class="bi bi-heart me-1"></i>รับฟังด้วยความเข้าใจ</span>
+                    </div>
+                    <div class="response-body-text">
+                      <p id="surveyResponseText" class="mb-0">
+                        <!-- Empathetic response inserted dynamically here -->
+                      </p>
+                    </div>
+                    <div class="response-read-cue text-muted small mt-2 pt-2 border-top border-light-subtle">
+                      <i class="bi bi-check2-circle text-success me-1"></i>รับฟังคำตอบของคุณแล้ว เมื่อพร้อมคุยต่อ ให้กดปุ่ม <strong>"ดำเนินการต่อ"</strong> ด้านล่างได้เลยนะ
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Navigation (Prev / Continue Buttons) -->
+            <div class="survey-nav-footer mt-4 pt-3 border-top border-light-subtle d-flex justify-content-between align-items-center">
+              <button id="surveyPrevBtn" class="btn btn-warm-outline">
+                <i class="bi bi-arrow-left me-1"></i>
+                <span>ย้อนกลับ</span>
+              </button>
+              <button id="surveyNextBtn" class="btn btn-warm-primary" disabled>
+                <span>ดำเนินการต่อ</span>
+                <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 3: หน้าสรุปคำตอบ (Summary Screen) -->
+        <div id="surveySummaryView" style="display: none;">
+          <div class="survey-main-box">
+            <div class="summary-welcome-card">
+              <div class="summary-icon-badge">
+                <i class="bi bi-heart-fill"></i>
+              </div>
+              <h3 class="summary-title">ขอบคุณที่เปิดใจรับฟังตัวเอง 🌿</h3>
+              <p class="summary-lead">
+                สรุปภาพรวมความรู้สึกจากแบบสำรวจในหมวด <strong id="summaryCategoryText" class="text-accent">การเรียน</strong>
+              </p>
+            </div>
+
+            <!-- ประวัติคำตอบที่เลือกทั้งหมด -->
+            <div class="mb-4">
+              <h5 class="fw-bold mb-3 text-main">
+                <i class="bi bi-card-checklist me-2 text-warning"></i>คำตอบที่คุณได้ทบทวนไว้:
+              </h5>
+              <div id="summaryAnswersList" class="summary-answers-wrapper">
+                <!-- Injected by JS -->
+              </div>
+            </div>
+
+            <!-- สรุปสิ่งที่ผู้ใช้อาจกำลังเผชิญ (สะท้อน ไม่ใช่วินิจฉัย) -->
+            <div class="summary-reflection-box">
+              <h5>
+                <i class="bi bi-chat-square-heart"></i>
+                <span>สิ่งที่คุณอาจกำลังเผชิญในตอนนี้</span>
+              </h5>
+              <p id="summaryReflectionText">
+                กำลังประมวลผลข้อความ...
+              </p>
+            </div>
+
+            <!-- ข้อความให้กำลังใจที่สัมพันธ์กับคำตอบ -->
+            <div class="summary-encouragement-box">
+              <div class="quote-icon"><i class="bi bi-quote"></i></div>
+              <h5 class="fw-bold text-main mb-2">ข้อความเล็ก ๆ ที่อยากโอบกอดใจคุณ</h5>
+              <p id="summaryEncouragementText">
+                กำลังประมวลผลข้อความกำลังใจ...
+              </p>
+            </div>
+
+            <!-- คำแนะนำเล็ก ๆ ที่สามารถลองทำได้ (3 การ์ด) -->
+            <div class="mb-4">
+              <h5 class="fw-bold mb-3 text-main">
+                <i class="bi bi-flower1 me-2 text-success"></i>ก้าวเล็ก ๆ ที่คุณสามารถลองทำได้ในวันนี้:
+              </h5>
+              <div id="summaryTipsContainer" class="row g-3">
+                <!-- Tips Injected by JS -->
+              </div>
+            </div>
+
+            <!-- ปลายทางและการเริ่มต้นใหม่ -->
+            <div class="d-flex flex-wrap gap-3 justify-content-center pt-3 border-top">
+              <button id="surveyRestartBtn" class="btn btn-warm-primary">
+                <i class="bi bi-arrow-counterclockwise me-1"></i>
+                <span>ทำแบบสำรวจใหม่อีกครั้ง</span>
+              </button>
+              <a href="#encouragement" class="btn btn-warm-outline">
+                <i class="bi bi-chat-heart me-1"></i>
+                <span>อ่านข้อความกำลังใจอื่น ๆ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ส่วนที่ 3 เดิม: Quick Mood Check (เช็กความรู้สึกเร่งด่วน)
+         =================================================================== -->
+    <section class="mood-section" id="moods">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="text-center">
+          <span class="section-badge">เช็กอารมณ์ด่วน</span>
+          <h2 class="section-title">หรือเลือกความรู้สึกที่กำลังพบเจอในทันที</h2>
+          <p class="section-subtitle">
+            หากยังไม่พร้อมทำแบบสำรวจ สามารถแตะเลือกการ์ดความรู้สึกด้านล่างเพื่อรับข้อความปลอบโยนได้ทันที
+          </p>
+        </div>
+
+        <!-- 6 Mood Cards Grid -->
+        <div class="row g-4">
+          <!-- Card 1: เหนื่อยล้า -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="mood-card" data-mood="exhausted" tabindex="0" role="button" aria-label="คลิกเพื่อสำรวจความรู้สึกเหนื่อยล้า">
+              <div class="mood-icon-box mood-icon-exhausted">
+                <i class="bi bi-battery-half"></i>
+              </div>
+              <span class="mood-tag">ต้องการการพักผ่อน</span>
+              <h3 class="mood-title">เหนื่อยล้า</h3>
+              <p class="mood-desc">
+                เมื่อร่างกายหรือจิตใจส่งสัญญาณเตือนว่ากำลังแบกรับมากเกินไป และต้องการเวลาชาร์จพลังเงียบ ๆ
+              </p>
+              <div class="mood-action-pill">
+                <span>แตะเพื่อเปิดอ่านข้อความ</span>
+                <i class="bi bi-arrow-right-short fs-5"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: เศร้า -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="mood-card" data-mood="sad" tabindex="0" role="button" aria-label="คลิกเพื่อสำรวจความรู้สึกเศร้า">
+              <div class="mood-icon-box mood-icon-sad">
+                <i class="bi bi-cloud-rain"></i>
+              </div>
+              <span class="mood-tag">ต้องการการรับฟัง</span>
+              <h3 class="mood-title">เศร้า</h3>
+              <p class="mood-desc">
+                น้ำตาไม่ใช่ความอ่อนแอ แต่คือการปลดปล่อยสิ่งที่อัดอั้นไว้ อนุญาตให้ตัวเองร้องไห้ได้นะ
+              </p>
+              <div class="mood-action-pill">
+                <span>แตะเพื่อเปิดอ่านข้อความ</span>
+                <i class="bi bi-arrow-right-short fs-5"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: เครียด -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="mood-card" data-mood="stressed" tabindex="0" role="button" aria-label="คลิกเพื่อสำรวจความรู้สึกเครียด">
+              <div class="mood-icon-box mood-icon-stressed">
+                <i class="bi bi-wind"></i>
+              </div>
+              <span class="mood-tag">ต้องการความสงบ</span>
+              <h3 class="mood-title">เครียด</h3>
+              <p class="mood-desc">
+                เรื่องราวถาโถมจนความคิดพันกันยุ่งเหยิง ลองวางทุกอย่างลงชั่วคราวแล้วสูดหายใจลึก ๆ
+              </p>
+              <div class="mood-action-pill">
+                <span>แตะเพื่อเปิดอ่านข้อความ</span>
+                <i class="bi bi-arrow-right-short fs-5"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: โดดเดี่ยว -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="mood-card" data-mood="lonely" tabindex="0" role="button" aria-label="คลิกเพื่อสำรวจความรู้สึกโดดเดี่ยว">
+              <div class="mood-icon-box mood-icon-lonely">
+                <i class="bi bi-stars"></i>
+              </div>
+              <span class="mood-tag">ต้องการความอบอุ่น</span>
+              <h3 class="mood-title">โดดเดี่ยว</h3>
+              <p class="mood-desc">
+                แม้ในมุมที่เงียบเหงาและรู้สึกเหมือนไม่มีใครเข้าใจ คุณไม่ได้อยู่เพียงลำพังเสมอไปนะ
+              </p>
+              <div class="mood-action-pill">
+                <span>แตะเพื่อเปิดอ่านข้อความ</span>
+                <i class="bi bi-arrow-right-short fs-5"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: สับสน -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="mood-card" data-mood="confused" tabindex="0" role="button" aria-label="คลิกเพื่อสำรวจความรู้สึกสับสน">
+              <div class="mood-icon-box mood-icon-confused">
+                <i class="bi bi-compass"></i>
+              </div>
+              <span class="mood-tag">ต้องการเวลา</span>
+              <h3 class="mood-title">สับสน</h3>
+              <p class="mood-desc">
+                ยังไม่ต้องมีคำตอบสำหรับทุกเรื่องก็ได้ การหลงทางชั่วคราวเป็นส่วนหนึ่งของการเติบโต
+              </p>
+              <div class="mood-action-pill">
+                <span>แตะเพื่อเปิดอ่านข้อความ</span>
+                <i class="bi bi-arrow-right-short fs-5"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: หมดกำลังใจ -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="mood-card" data-mood="demotivated" tabindex="0" role="button" aria-label="คลิกเพื่อสำรวจความรู้สึกหมดกำลังใจ">
+              <div class="mood-icon-box mood-icon-demotivated">
+                <i class="bi bi-flower1"></i>
+              </div>
+              <span class="mood-tag">ต้องการพลังใจ</span>
+              <h3 class="mood-title">หมดกำลังใจ</h3>
+              <p class="mood-desc">
+                ในวันที่ก้าวขาไม่ออก แค่หายใจและหยุดพักนิ่ง ๆ คุณก็เก่งและอดทนมากพอแล้ว
+              </p>
+              <div class="mood-action-pill">
+                <span>แตะเพื่อเปิดอ่านข้อความ</span>
+                <i class="bi bi-arrow-right-short fs-5"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Mood Reassurance Box (Appears on Card Click) -->
+        <div id="moodResponseBox" class="mood-response-container">
+          <button id="closeMoodResponse" class="mood-response-close" aria-label="ปิดข้อความ">
+            <i class="bi bi-x-lg"></i>
+          </button>
+          <div class="d-flex align-items-start">
+            <div id="responseMoodIcon" class="mood-icon-box mood-icon-exhausted mb-0 me-3 flex-shrink-0">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <h4 id="responseMoodTitle" class="mb-0 fs-5 fw-bold">ข้อความสำหรับคุณ</h4>
+                <span id="responseMoodBadge" class="mood-tag mb-0">กำลังใจ</span>
+              </div>
+              <p id="responseMoodText" class="text-secondary mb-2 fs-6">
+                ข้อความกำลังใจจะปรากฏที่นี่...
+              </p>
+              <small id="responseMoodTip" class="text-muted fst-italic d-block">
+                คำแนะนำเล็ก ๆ เพื่อหัวใจของคุณ
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ส่วนที่ 4: Encouragement Section (การ์ดข้อความอ่าน ไม่ใช่ปุ่มกด)
+         =================================================================== -->
+    <section class="encouragement-section" id="encouragement">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="text-center">
+          <span class="section-badge">ก้าวที่ 4: ส่งต่อความอบอุ่น</span>
+          <h2 class="section-title">ข้อความเล็ก ๆ ที่อยากบอกคุณ</h2>
+          <p class="section-subtitle">
+            เก็บข้อความเหล่านี้ไว้ในใจ เมื่อไหร่ที่รู้สึกเหนื่อยล้า สามารถกลับมาอ่านได้เสมอ
+          </p>
+        </div>
+
+        <!-- 3 Encouragement Cards -->
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="encouragement-card">
+              <div class="quote-mark">
+                <i class="bi bi-quote"></i>
+              </div>
+              <h3 class="encouragement-text">
+                คุณไม่จำเป็นต้องเก่ง<br>ไปทุกเรื่องก็ได้
+              </h3>
+              <p class="encouragement-subtext">
+                คุณค่าในตัวคุณไม่ได้ขึ้นอยู่กับความสมบูรณ์แบบ ไม่จำเป็นต้องแบกรับความคาดหวังของทุกคนไว้ แค่เป็นตัวคุณในวันนี้ก็มีค่ามากพอแล้ว
+              </p>
+              <div class="encouragement-footer">
+                <i class="bi bi-stars"></i>
+                <span>ความไม่สมบูรณ์แบบคือความเป็นมนุษย์</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="encouragement-card">
+              <div class="quote-mark">
+                <i class="bi bi-quote"></i>
+              </div>
+              <h3 class="encouragement-text">
+                การพักไม่ได้หมายความว่า<br>คุณกำลังยอมแพ้
+              </h3>
+              <p class="encouragement-subtext">
+                ร่างกายและจิตใจไม่ใช่เครื่องจักร การหยุดพักเพื่อดูแลตัวเองคือความกล้าหาญ ต้นไม้ยังต้องรอฤดูผลัดใบ หัวใจของคุณก็ต้องการเวลาฟื้นฟูเช่นกัน
+              </p>
+              <div class="encouragement-footer">
+                <i class="bi bi-cup-hot"></i>
+                <span>ให้เวลาตัวเองได้หายใจช้า ๆ</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="encouragement-card">
+              <div class="quote-mark">
+                <i class="bi bi-quote"></i>
+              </div>
+              <h3 class="encouragement-text">
+                ค่อย ๆ ก้าวไปในแบบของตัวเอง<br>ก็เพียงพอแล้ว
+              </h3>
+              <p class="encouragement-subtext">
+                ชีวิตไม่ใช่การแข่งขันกับใคร ทุกคนมีจังหวะเวลาและฤดูกาลเติบโตของตัวเอง ไม่จำเป็นต้องเทียบความเร็วกับใคร เดินช้า ๆ แต่สบายใจดีกว่าเสมอ
+              </p>
+              <div class="encouragement-footer">
+                <i class="bi bi-flower2"></i>
+                <span>จังหวะก้าวของคุณ มีความหมายเสมอ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ส่วนเพิ่มเติม: About Section (เกี่ยวกับเรา)
+         =================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-box">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+              <span class="section-badge">ก้าวที่ 1: เกี่ยวกับ Safe Haven</span>
+              <h2 class="section-title mb-3">พื้นที่หลบฝนทางใจสำหรับทุกคน</h2>
+              <p class="text-muted mb-4">
+                Safe Haven เกิดขึ้นจากความตั้งใจที่จะสร้างมุมพักผ่อนที่ปลอดภัย ในวันที่โลกภายนอกอาจเสียงดังหรือเรียกร้องจากคุณมากเกินไป เราอยากเป็นสถานที่ที่คุณสามารถถอดหน้ากากแห่งความเข้มแข็ง และเป็นตัวเองได้อย่างสบายใจ
+              </p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="brand-icon-wrapper">
+                  <i class="bi bi-heart-fill"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold">100% ปลอดภัยและเป็นส่วนตัว</h6>
+                  <small class="text-muted">ไม่มีการตัดสิน ไม่มีการบันทึกข้อมูลส่วนบุคคลใด ๆ</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="value-pill-card">
+                    <div class="value-icon">
+                      <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h4 class="value-title">ไร้การตัดสิน</h4>
+                    <p class="value-desc">ทุกความรู้สึกของคุณถูกต้องและได้รับการยอมรับเสมอ</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="value-pill-card">
+                    <div class="value-icon">
+                      <i class="bi bi-sun"></i>
+                    </div>
+                    <h4 class="value-title">อบอุ่น เรียบง่าย</h4>
+                    <p class="value-desc">บรรยากาศละมุน สบายตา เพื่อให้จิตใจได้สงบลง</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="value-pill-card py-3">
+                    <div class="d-flex align-items-center justify-content-center gap-3">
+                      <i class="bi bi-chat-quote fs-2 text-warning"></i>
+                      <p class="mb-0 text-start">
+                        <strong>“A Safe Place for Your Feelings”</strong><br>
+                        <span class="text-muted">ไม่ว่าวันนี้จะเป็นอย่างไร ขอบคุณที่คุณยังอยู่ตรงนี้นะ</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       ส่วนที่ 5: Footer
+       =================================================================== -->
+  <footer class="footer-safehaven">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Logo & Description -->
+        <div class="col-lg-5">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="brand-icon-wrapper" style="width: 38px; height: 38px; font-size: 1.1rem;">
+              <i class="bi bi-heart-pulse-fill"></i>
+            </div>
+            <span class="footer-brand-title mb-0">Safe Haven</span>
+          </div>
+          <p class="footer-desc">
+            Safe Haven คือพื้นที่เล็ก ๆ ที่เปิดโอกาสให้ผู้คนได้เข้ามาสำรวจความรู้สึก ระบายเรื่องราว และรับกำลังใจ ไม่ว่าจะกำลังเผชิญปัญหาเรื่องการเรียน ความรัก ครอบครัว เพื่อน หรือความรู้สึกภายในจิตใจ
+          </p>
+          <small class="text-muted d-block">
+            “A Safe Place for Your Feelings” — พื้นที่ปลอดภัยสำหรับทุกความรู้สึก
+          </small>
+        </div>
+
+        <!-- Main Navigation Links -->
+        <div class="col-sm-6 col-lg-3">
+          <h4 class="footer-heading">เมนูหลัก</h4>
+          <ul class="footer-links">
+            <li>
+              <a href="#hero"><i class="bi bi-chevron-right text-muted small"></i> หน้าแรก</a>
+            </li>
+            <li>
+              <a href="#survey"><i class="bi bi-chevron-right text-muted small"></i> สำรวจความรู้สึก</a>
+            </li>
+            <li>
+              <a href="#encouragement"><i class="bi bi-chevron-right text-muted small"></i> ข้อความให้กำลังใจ</a>
+            </li>
+            <li>
+              <a href="#about"><i class="bi bi-chevron-right text-muted small"></i> เกี่ยวกับเรา</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Helpful Resources / Crisis Helpline -->
+        <div class="col-sm-6 col-lg-4">
+          <h4 class="footer-heading">ช่องทางช่วยเหลือเมื่อต้องการคนคุย</h4>
+          <div class="footer-support-box">
+            <div class="footer-support-title">
+              <i class="bi bi-telephone-heart-fill"></i>
+              <span>สายด่วนสุขภาพจิต (โทรฟรี 24 ชม.)</span>
+            </div>
+            <p class="mb-2 small text-muted">หากรู้สึกไม่ไหว หรือต้องการผู้เชี่ยวชาญรับฟัง โทรได้ตลอดเวลา:</p>
+            <div class="d-flex flex-column gap-1">
+              <a href="tel:1323" class="footer-support-phone">
+                <i class="bi bi-telephone"></i> 1323 (สายด่วนสุขภาพจิต)
+              </a>
+              <a href="tel:021136789" class="footer-support-phone">
+                <i class="bi bi-telephone"></i> 02-113-6789 (สะมาริตันส์)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing Note Banner -->
+      <div class="footer-closing-banner">
+        <p class="footer-closing-text">
+          🤍 “คุณไม่จำเป็นต้องผ่านทุกอย่างไปเพียงลำพัง”
+        </p>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Safe Haven. All rights reserved.
+        </div>
+        <div>
+          ออกแบบด้วยความอบอุ่นและใส่ใจสำหรับทุกความรู้สึก
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="กลับสู่ด้านบน">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS (Popper included) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Main JS -->
+  <script src="js/main.js" onerror="this.onerror=null;this.src='main.js';"></script>
+</body>
+</html>
